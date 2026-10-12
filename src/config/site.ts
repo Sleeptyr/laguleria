@@ -27,12 +27,12 @@ export const siteConfig = {
   // Contacto & Redes (Completar con datos finales de los clientes)
   contact: {
     // Número con código de país sin espacios ni símbolos (+). Ej: 5492364XXXXXX
-    whatsappNumber: '5492364000000', // [REEMPLAZAR CON NÚMERO REAL]
+    whatsappNumber: '5492364266984',
     instagramHandle: '@laguleria_',
     instagramUrl: 'https://instagram.com/laguleria_',
-    address: 'Junín, Buenos Aires, Argentina', // [REEMPLAZAR CON DIRECCIÓN EXACTA]
-    googleMapsUrl: 'https://maps.google.com/?q=Junin,+Buenos+Aires,+Argentina', // [REEMPLAZAR CON LINK GOOGLE MAPS]
-    schedule: 'Jueves a Domingos de 19:30 a 00:00 hs', // [REEMPLAZAR CON HORARIOS REALES]
+    address: 'Arias 730, Junín, Buenos Aires',
+    googleMapsUrl: 'https://maps.google.com/?q=Arias+730,+Junin,+Buenos+Aires,+Argentina',
+    schedule: 'Jueves a Domingos de 19:30 a 00:00 hs',
     email: 'contacto@laguleria.com.ar' // [OPCIONAL]
   },
 
