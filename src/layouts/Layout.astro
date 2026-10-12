@@ -1,0 +1,79 @@
+---
+import '../styles/global.css';
+import { siteConfig } from '../config/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = `${siteConfig.brandName} | Cocina de Autor en Junín – Pecar Nunca Fue Tan Rico`, 
+  description = siteConfig.description 
+} = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, siteConfig.url).href;
+const ogImageUrl = new URL('/images/og-image.webp', siteConfig.url).href;
+---
+
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO Primario & Local -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Martín Tonidandel & Francina Melo" />
+    <meta name="geo.placename" content="Junín, Buenos Aires, Argentina" />
+    <meta name="geo.region" content="AR-B" />
+
+    <!-- Open Graph / Redes Sociales (Instagram & WhatsApp previews) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content={siteConfig.brandName} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <!-- Optimización de Fuentes jugetonas (Shrikhand + DynaPuff + Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link 
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@600;700;800;900&family=Shrikhand&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" 
+      rel="stylesheet" 
+    />
+
+    <!-- Preload del recurso LCP (Hero Dish) para garantizar LCP <= 2.5s -->
+    <link rel="preload" as="image" type="image/webp" href="/images/hero-plato.webp" fetchpriority="high" />
+  </head>
+
+  <body class="text-brand-dark antialiased">
+    <slot />
+
+    <!-- Carga diferida de scripts de interacción para no bloquear FCP ni LCP -->
+    <script>
+      import { initApp } from '../scripts/app';
+      
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initApp);
+      } else {
+        initApp();
+      }
+    </script>
+  </body>
+</html>

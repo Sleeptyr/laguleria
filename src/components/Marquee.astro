@@ -1,0 +1,29 @@
+---
+import { siteConfig } from '../config/site';
+
+const items = siteConfig.marqueeItems;
+---
+
+<section class="relative py-4 bg-brand-dark border-y-2 border-brand-dark/20 overflow-hidden select-none" aria-label="Frases destacadas de marca">
+  <div class="flex overflow-hidden">
+    <!-- Grupo 1 -->
+    <div class="animate-marquee flex items-center gap-8 py-1 whitespace-nowrap">
+      {items.map((phrase) => (
+        <span class="inline-flex items-center gap-6 font-display text-xl sm:text-3xl tracking-wide">
+          <span class="text-brand-surface inline-block text-[1.05em] transform -rotate-1">{phrase}</span>
+          <span class="text-brand-primary text-base" aria-hidden="true">&bull;</span>
+        </span>
+      ))}
+    </div>
+
+    <!-- Grupo 2 (Duplicado para loop infinito fluido, oculto para lectores de pantalla) -->
+    <div class="animate-marquee flex items-center gap-8 py-1 whitespace-nowrap" aria-hidden="true">
+      {items.map((phrase) => (
+        <span class="inline-flex items-center gap-6 font-display text-xl sm:text-3xl tracking-wide">
+          <span class="text-brand-surface inline-block text-[1.05em] transform -rotate-1">{phrase}</span>
+          <span class="text-brand-primary text-base">&bull;</span>
+        </span>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,107 @@
+---
+import { siteConfig, getWhatsAppUrl } from '../config/site';
+import Sprinkles from './Sprinkles.astro';
+
+const whatsappUrl = getWhatsAppUrl('hero');
+---
+
+<section class="relative pt-28 pb-16 sm:pt-36 sm:pb-24 overflow-hidden bg-transparent" id="inicio">
+  
+  <!-- Formas orgánicas de fondo inspiradas en Twice Bittn -->
+  <div class="pointer-events-none absolute -top-24 -right-24 w-80 h-80 sm:w-[500px] sm:h-[500px] bg-brand-primary/25 blob-shape-1 blur-2xl -z-10" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute top-1/2 -left-32 w-72 h-72 sm:w-[450px] sm:h-[450px] bg-brand-surface blob-shape-2 blur-xl -z-10" aria-hidden="true"></div>
+
+  <!-- Microilustraciones y chispitas flotantes -->
+  <Sprinkles />
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+    <div class="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-14">
+      
+      <!-- Contenido textual (Alineado con el tono desenfadado y rioplatense) -->
+      <div class="flex-1 text-center lg:text-left space-y-6">
+        
+        <!-- Tagline / Badge superior -->
+        <div class="inline-flex items-center gap-2 bg-brand-surface/90 border border-brand-dark/20 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bouncy font-bold tracking-wide text-brand-dark shadow-sm transform -rotate-1">
+          <span class="w-2 h-2 rounded-full bg-brand-dark animate-ping"></span>
+          <span>Cocina de autor en {siteConfig.city}</span>
+        </div>
+
+        <!-- Título principal H1 (Único en la página para SEO y jerarquía) -->
+        <h1 class="font-display text-5xl sm:text-7xl lg:text-8xl font-normal tracking-wide leading-[1.05] select-none">
+          <span class="text-brand-dark inline-block text-[1.05em] transform -rotate-2">Pecar</span>{" "}
+          <span class="text-brand-surface inline-block text-[1.18em] transform rotate-2 drop-shadow-[0_2px_4px_rgba(38,31,28,0.2)]">nunca</span>
+          <br class="hidden sm:inline" />
+          <span class="text-brand-dark inline-block text-[0.96em] transform -rotate-1">fue</span>{" "}
+          <span class="relative inline-block text-brand-surface text-[1.25em] transform rotate-3 drop-shadow-[0_3px_6px_rgba(38,31,28,0.25)] underline decoration-brand-dark decoration-wavy decoration-3">tan rico.</span>
+        </h1>
+
+        <!-- Párrafo de apertura con gancho -->
+        <p class="text-base sm:text-xl text-brand-dark/85 max-w-xl mx-auto lg:mx-0 font-medium leading-relaxed">
+          Olvidate de la culpa. En <strong class="text-brand-dark font-black">la gulería</strong> cocinamos para que cada bocado sea un descontrol de sabor. Sin vueltas ni menú rígido: escribinos y resolvé tu antojo en un mensaje.
+        </p>
+
+        <!-- CTA Principal destacado con microinteracciones -->
+        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-track="click_whatsapp"
+            data-location="hero"
+            class="group w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-dark hover:bg-black text-brand-surface font-bouncy text-lg font-bold uppercase tracking-wider px-8 py-4 rounded-full shadow-[0_12px_28px_rgba(38,31,28,0.4)] hover:shadow-[0_16px_34px_rgba(38,31,28,0.5)] transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 min-h-[52px]"
+            aria-label="Pedir por WhatsApp ahora"
+          >
+            <!-- Icono WhatsApp -->
+            <svg class="w-6 h-6 fill-current transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.472 14.382c-.301-.15-1.782-.879-2.058-.98-.276-.1-.477-.15-.678.15-.2.301-.778.98-.954 1.18-.175.2-.351.226-.652.075-.3-.15-1.268-.468-2.416-1.492-.893-.797-1.496-1.782-1.672-2.083-.175-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.2-.301.301-.502.101-.2.05-.376-.025-.526-.075-.15-.678-1.632-.929-2.235-.245-.588-.494-.508-.679-.518l-.578-.01c-.2 0-.527.075-.803.376s-1.054 1.03-1.054 2.513 1.079 2.914 1.23 3.115c.15.2 2.123 3.242 5.143 4.547.718.311 1.279.497 1.716.636.721.23 1.378.197 1.897.12.578-.087 1.782-.728 2.033-1.431.251-.703.251-1.305.176-1.43-.075-.126-.276-.201-.577-.351z"/>
+              <path d="M12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.662 1.434 5.176L2 22l4.981-1.396A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2a8.167 8.167 0 01-4.225-1.177l-.303-.18-3.08.863.87-2.997-.197-.319A8.169 8.169 0 1112 20.2z"/>
+            </svg>
+            <span>Quiero pecar ya</span>
+          </a>
+        </div>
+
+        <!-- Microcopy bajo el botón -->
+        <p class="text-xs text-brand-dark/70 font-medium">
+          Atención directa por WhatsApp &bull; Pedidos, reservas y consultas
+        </p>
+
+      </div>
+
+      <!-- Protagonista visual (Plato estrella con composición lúdica como el croissant en Twice Bittn) -->
+      <div class="flex-1 flex justify-center items-center relative w-full max-w-sm sm:max-w-md lg:max-w-none">
+        
+        <!-- Círculo / Halo de fondo -->
+        <div class="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-brand-surface/50 -z-10 blur-xl" aria-hidden="true"></div>
+        
+        <!-- Píldora de badge lúdico flotante -->
+        <div class="absolute -top-3 -right-2 sm:right-6 bg-brand-dark text-brand-surface text-xs sm:text-sm font-bold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-lg transform rotate-6 animate-float z-20 border border-brand-surface/20">
+          Recién horneado
+        </div>
+
+        <!-- Imagen del plato estrella (Preload para LCP, dimensiones exactas) -->
+        <div class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] flex items-center justify-center p-2" data-parallax="0.2">
+          <div class="w-full h-full rounded-[2.5rem] sm:rounded-[3rem] overflow-hidden border-4 border-brand-surface shadow-[0_20px_45px_rgba(38,31,28,0.28)] relative group">
+            <img
+              src="/images/hero-plato.webp"
+              alt="Medialunas y croissants de masa madre - Plato estrella de La Gulería"
+              width="800"
+              height="800"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-brand-surface text-xs sm:text-sm font-bold tracking-wide flex items-center justify-between pointer-events-none">
+              <span class="bg-brand-dark/85 backdrop-blur-sm px-3.5 py-1 rounded-full shadow-sm">
+                Medialunas de especialidad
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>

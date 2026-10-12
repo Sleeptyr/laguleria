@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://laguleria.com.ar/sitemap.xml

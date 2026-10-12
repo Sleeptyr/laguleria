@@ -1,0 +1,104 @@
+---
+import { siteConfig } from '../config/site';
+
+const { subtitle, deliveryNote } = siteConfig.howItWorks;
+---
+
+<section class="py-20 sm:py-28 relative overflow-hidden" id="como-funciona">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    
+    <!-- Encabezado juguetón con variación de tamaño y color en cada palabra -->
+    <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+      <span class="font-bouncy text-xs sm:text-sm font-bold tracking-widest uppercase text-brand-dark/70 bg-brand-surface/60 px-4 py-1.5 rounded-full inline-block transform -rotate-1 border border-brand-dark/15 shadow-sm">
+        Tres pasos y listo
+      </span>
+
+      <h2 class="font-display text-4xl sm:text-6xl lg:text-7xl font-normal tracking-wide leading-tight select-none">
+        <span class="text-brand-surface inline-block text-[1.15em] transform -rotate-2 drop-shadow-[0_2px_4px_rgba(38,31,28,0.2)]">Cómo</span>{" "}
+        <span class="text-brand-dark inline-block text-[0.92em] transform rotate-1">saciar</span>{" "}
+        <span class="text-brand-dark inline-block text-[1.08em] transform -rotate-1">el</span>{" "}
+        <span class="text-brand-surface inline-block text-[1.22em] transform rotate-3 drop-shadow-[0_2px_4px_rgba(38,31,28,0.2)] underline decoration-brand-dark decoration-wavy decoration-2">antojo</span>
+      </h2>
+
+      <p class="text-base sm:text-lg text-brand-dark/85 font-medium leading-relaxed max-w-lg mx-auto">
+        {subtitle}
+      </p>
+    </div>
+
+    <!-- Flujo de los 3 pasos: diseño gráfico artesanal con tipografía juguetona -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 relative">
+      
+      <!-- Paso 1 -->
+      <div class="group relative flex flex-col pt-6 border-t-2 border-brand-dark/30 hover:border-brand-dark transition-all duration-300">
+        <div class="flex items-baseline justify-between mb-4">
+          <span class="font-display text-5xl sm:text-6xl text-brand-surface drop-shadow-[0_3px_6px_rgba(38,31,28,0.25)] group-hover:scale-110 group-hover:-rotate-3 transition-transform inline-block">
+            01
+          </span>
+          <span class="font-bouncy text-xs font-bold tracking-wider uppercase bg-brand-dark text-brand-surface px-3 py-1 rounded-full shadow-sm">
+            Paso 1
+          </span>
+        </div>
+
+        <h3 class="font-display text-2xl sm:text-3xl font-normal mb-3 tracking-wide select-none">
+          <span class="text-brand-dark inline-block text-[1.05em] transform -rotate-1">Tocá</span>{" "}
+          <span class="text-brand-surface inline-block text-[1.15em] transform rotate-1 drop-shadow-sm">el botón</span>
+        </h3>
+
+        <p class="text-brand-dark/80 text-sm sm:text-base leading-relaxed font-normal">
+          Hacé clic en cualquier botón de la página para abrir nuestro WhatsApp directo sin intermediarios.
+        </p>
+      </div>
+
+      <!-- Paso 2 -->
+      <div class="group relative flex flex-col pt-6 border-t-2 border-brand-dark/30 hover:border-brand-dark transition-all duration-300">
+        <div class="flex items-baseline justify-between mb-4">
+          <span class="font-display text-5xl sm:text-6xl text-brand-surface drop-shadow-[0_3px_6px_rgba(38,31,28,0.25)] group-hover:scale-110 group-hover:rotate-3 transition-transform inline-block">
+            02
+          </span>
+          <span class="font-bouncy text-xs font-bold tracking-wider uppercase bg-brand-dark text-brand-surface px-3 py-1 rounded-full shadow-sm">
+            Paso 2
+          </span>
+        </div>
+
+        <h3 class="font-display text-2xl sm:text-3xl font-normal mb-3 tracking-wide select-none">
+          <span class="text-brand-surface inline-block text-[1.15em] transform -rotate-1 drop-shadow-sm">Contanos</span>{" "}
+          <span class="text-brand-dark inline-block text-[1.05em] transform rotate-1">qué querés</span>
+        </h3>
+
+        <p class="text-brand-dark/80 text-sm sm:text-base leading-relaxed font-normal">
+          Decinos si buscás delivery, retiro en el local, una reserva o tenés alguna consulta especial.
+        </p>
+      </div>
+
+      <!-- Paso 3 -->
+      <div class="group relative flex flex-col pt-6 border-t-2 border-brand-dark/30 hover:border-brand-dark transition-all duration-300">
+        <div class="flex items-baseline justify-between mb-4">
+          <span class="font-display text-5xl sm:text-6xl text-brand-surface drop-shadow-[0_3px_6px_rgba(38,31,28,0.25)] group-hover:scale-110 group-hover:-rotate-3 transition-transform inline-block">
+            03
+          </span>
+          <span class="font-bouncy text-xs font-bold tracking-wider uppercase bg-brand-dark text-brand-surface px-3 py-1 rounded-full shadow-sm">
+            Paso 3
+          </span>
+        </div>
+
+        <h3 class="font-display text-2xl sm:text-3xl font-normal mb-3 tracking-wide select-none">
+          <span class="text-brand-dark inline-block text-[1.05em] transform rotate-1">Coordinamos</span>{" "}
+          <span class="text-brand-surface inline-block text-[1.15em] transform -rotate-1 drop-shadow-sm">al toque</span>
+        </h3>
+
+        <p class="text-brand-dark/80 text-sm sm:text-base leading-relaxed font-normal">
+          Te confirmamos disponibilidad al instante y preparamos tu pecado gastronómico.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Nota inferior editorial tipográfica -->
+    <div class="mt-16 pt-8 border-t border-brand-dark/20 text-center">
+      <p class="font-bouncy text-sm font-semibold text-brand-dark tracking-wide">
+        Take away y envíos en Junín &bull; Horarios de atención: Jueves a Domingos desde las 19:30 hs
+      </p>
+    </div>
+
+  </div>
+</section>

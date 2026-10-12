@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #E6A192;
+  --color-primary-dark: #D48877;
+  --color-accent: #261F1C;
+  --color-accent-hover: #140F0D;
+  --color-dark: #261F1C;
+  --color-cream: #E6A192;
+  --color-surface: #FAF2EC;
+  --color-muted: #52403B;
+  --color-border: #D89485;
+}
+
+/* Base resets & typography */
+html {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: var(--color-dark);
+  background-color: #E6A192;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #E6A192 0px,
+    #E6A192 14px,
+    #ECAFA2 14px,
+    #ECAFA2 28px
+  );
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  background-color: #E6A192;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #E6A192 0px,
+    #E6A192 14px,
+    #ECAFA2 14px,
+    #ECAFA2 28px
+  );
+}
+
+::selection {
+  background-color: #FF3366;
+  color: #FFFFFF;
+}
+
+/* Lenis smooth scroll */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Marquee infinite scroll */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 24s linear infinite;
+}
+
+.animate-marquee:hover,
+.animate-marquee:focus-within {
+  animation-play-state: paused;
+}
+
+/* Organic blobs & floating elements inspired by Twice Bittn */
+.blob-shape-1 {
+  border-radius: 64% 36% 70% 30% / 48% 62% 38% 52%;
+}
+
+.blob-shape-2 {
+  border-radius: 38% 62% 43% 57% / 60% 30% 70% 40%;
+}
+
+.blob-shape-3 {
+  border-radius: 54% 46% 35% 65% / 44% 57% 43% 56%;
+}
+
+/* Focus styles for WCAG 2.2 AA */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 9999px;
+}
+
+/* Prefers-reduced-motion: eliminate parallax, auto marquee and complex animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-marquee {
+    animation: none !important;
+    transform: none !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  [data-parallax] {
+    transform: none !important;
+  }
+}

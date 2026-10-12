@@ -1,0 +1,168 @@
+---
+import { siteConfig, getWhatsAppUrl } from '../config/site';
+
+const whatsappUrl = getWhatsAppUrl('footer');
+const currentYear = new Date().getFullYear();
+
+// Datos estructurados Schema.org (Restaurant / FoodEstablishment)
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": siteConfig.brandName,
+  "description": siteConfig.description,
+  "url": siteConfig.url,
+  "telephone": siteConfig.contact.whatsappNumber,
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Junín",
+    "addressRegion": "Buenos Aires",
+    "addressCountry": "AR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -34.5838,
+    "longitude": -60.9433
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "19:30",
+      "closes": "23:59"
+    }
+  ],
+  "sameAs": [
+    siteConfig.contact.instagramUrl
+  ]
+};
+---
+
+<footer class="bg-brand-dark text-brand-cream relative pt-20 pb-12 overflow-hidden border-t-4 border-brand-primary" id="contacto">
+  
+  <!-- Chispitas y estrellas decorativas sutiles en el footer -->
+  <div class="pointer-events-none absolute inset-0 opacity-10 select-none" aria-hidden="true">
+    <div class="absolute top-10 left-10 w-4 h-4 rounded-full bg-brand-primary"></div>
+    <div class="absolute bottom-20 right-16 w-3 h-3 rounded-full bg-brand-accent"></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    
+    <!-- CTA Principal de Cierre en Footer -->
+    <div class="bg-brand-surface text-brand-dark rounded-3xl p-8 sm:p-12 text-center max-w-3xl mx-auto mb-16 shadow-2xl relative overflow-hidden">
+      <!-- Fondo de detalle lúdico -->
+      <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-primary/30 rounded-full blur-xl" aria-hidden="true"></div>
+
+      <h2 class="font-display text-3xl sm:text-5xl font-normal mb-4 tracking-wide select-none">
+        <span class="text-brand-dark inline-block text-[1.08em] transform -rotate-1">¿Te</span>{" "}
+        <span class="text-brand-primary-dark inline-block text-[1.15em] transform rotate-1">tentaste?</span>{" "}
+        <span class="text-brand-dark inline-block text-[1em]">Hablanos ahora</span>
+      </h2>
+      <p class="text-brand-muted text-sm sm:text-base max-w-md mx-auto mb-8 font-medium">
+        Tomamos pedidos y reservas directo por WhatsApp. Tocá el botón y te respondemos en minutos.
+      </p>
+
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        data-track="click_whatsapp"
+        data-location="footer"
+        class="inline-flex items-center justify-center gap-3 bg-brand-dark hover:bg-black text-brand-surface font-bouncy text-base sm:text-lg font-bold uppercase tracking-wider px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 min-h-[50px]"
+        aria-label="Abrir WhatsApp para escribir a La Gulería"
+      >
+        <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M17.472 14.382c-.301-.15-1.782-.879-2.058-.98-.276-.1-.477-.15-.678.15-.2.301-.778.98-.954 1.18-.175.2-.351.226-.652.075-.3-.15-1.268-.468-2.416-1.492-.893-.797-1.496-1.782-1.672-2.083-.175-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.2-.301.301-.502.101-.2.05-.376-.025-.526-.075-.15-.678-1.632-.929-2.235-.245-.588-.494-.508-.679-.518l-.578-.01c-.2 0-.527.075-.803.376s-1.054 1.03-1.054 2.513 1.079 2.914 1.23 3.115c.15.2 2.123 3.242 5.143 4.547.718.311 1.279.497 1.716.636.721.23 1.378.197 1.897.12.578-.087 1.782-.728 2.033-1.431.251-.703.251-1.305.176-1.43-.075-.126-.276-.201-.577-.351z"/>
+          <path d="M12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.662 1.434 5.176L2 22l4.981-1.396A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2a8.167 8.167 0 01-4.225-1.177l-.303-.18-3.08.863.87-2.997-.197-.319A8.169 8.169 0 1112 20.2z"/>
+        </svg>
+        <span>Escribir por WhatsApp</span>
+      </a>
+
+      <!-- Texto de contingencia si el usuario no tiene WhatsApp instalado -->
+      <p class="mt-4 text-xs text-brand-muted">
+        ¿Sin WhatsApp en este dispositivo? Escribinos al número <strong class="text-brand-dark">+{siteConfig.contact.whatsappNumber}</strong> o vía Instagram.
+      </p>
+    </div>
+
+    <!-- Grilla de Información de Contacto -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-brand-cream/15 text-center md:text-left">
+      
+      <!-- Bloque 1: Identidad -->
+      <div>
+        <h3 class="font-display text-2xl font-black text-brand-primary mb-3 tracking-tight">
+          {siteConfig.brandName}
+        </h3>
+        <p class="text-sm text-brand-cream/70 leading-relaxed max-w-xs mx-auto md:mx-0">
+          Propuesta gastronómica con identidad, carácter y pasión en Junín, Buenos Aires.
+        </p>
+      </div>
+
+      <!-- Bloque 2: Ubicación & Horarios -->
+      <div>
+        <h4 class="font-display text-base font-bold text-brand-cream uppercase tracking-wider mb-3">
+          Ubicación y Atención
+        </h4>
+        <ul class="space-y-2.5 text-sm text-brand-cream/85">
+          <li class="flex items-start justify-center md:justify-start gap-2">
+            <span class="font-bold text-brand-surface/60 text-xs uppercase tracking-wider min-w-[70px]">Dirección</span>
+            <a 
+              href={siteConfig.contact.googleMapsUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              data-track="click_mapa"
+              class="hover:text-brand-primary underline underline-offset-4 transition-colors"
+            >
+              {siteConfig.contact.address}
+            </a>
+          </li>
+          <li class="flex items-start justify-center md:justify-start gap-2">
+            <span class="font-bold text-brand-surface/60 text-xs uppercase tracking-wider min-w-[70px]">Horarios</span>
+            <span>{siteConfig.contact.schedule}</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Bloque 3: Redes Sociales -->
+      <div>
+        <h4 class="font-display text-base font-bold text-brand-cream uppercase tracking-wider mb-3">
+          Seguinos en Redes
+        </h4>
+        <div class="space-y-2 text-sm">
+          <a
+            href={siteConfig.contact.instagramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-track="click_instagram"
+            class="inline-flex items-center gap-2 text-brand-cream/90 hover:text-brand-primary transition-colors py-1"
+          >
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            <span class="font-bold">{siteConfig.contact.instagramHandle}</span>
+          </a>
+          <p class="text-xs text-brand-cream/60">
+            Seguinos en historias para ver los especiales del día.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Barra inferior Legal & Créditos -->
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-brand-cream/60 gap-4 text-center sm:text-left">
+      <div>
+        &copy; {currentYear} {siteConfig.brandName}. Todos los derechos reservados.
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="/politica-de-privacidad" class="hover:text-brand-primary transition-colors underline underline-offset-4">
+          Política de Privacidad
+        </a>
+        <span>•</span>
+        <span>Junín, Bs. As.</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Schema.org estructurado JSON-LD para SEO Local y Google Business -->
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</footer>

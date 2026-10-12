@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { siteConfig } from '../config/site';
+---
+
+<Layout title="404 | ¡Pecaste de más! | La Gulería" description="Esta página no existe en La Gulería. Volvé al inicio para calmar el antojo.">
+  <main class="min-h-screen flex items-center justify-center bg-brand-cream px-4 py-16 text-center relative overflow-hidden">
+    
+    <!-- Blobs decorativos -->
+    <div class="pointer-events-none absolute w-96 h-96 rounded-full bg-brand-primary/20 blur-3xl -z-10" aria-hidden="true"></div>
+
+    <div class="max-w-md mx-auto space-y-6">
+      <div class="inline-block bg-brand-accent text-white font-display text-6xl font-black px-6 py-2 rounded-3xl shadow-lg transform -rotate-3">
+        404
+      </div>
+
+      <h1 class="font-display text-3xl sm:text-4xl font-black text-brand-dark tracking-tight">
+        Te pasaste de rosca.
+      </h1>
+
+      <p class="text-brand-muted text-base leading-relaxed">
+        Buscaste un bocado que no existe o la gula te llevó por mal camino. No te preocupes, volvé al inicio y te lo solucionamos por WhatsApp.
+      </p>
+
+      <div class="pt-4">
+        <a 
+          href="/" 
+          class="inline-flex items-center justify-center bg-brand-primary hover:bg-brand-primary-dark text-brand-dark font-display font-extrabold uppercase tracking-wider px-8 py-4 rounded-full shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 min-h-[48px]"
+        >
+          Volver a La Gulería
+        </a>
+      </div>
+    </div>
+  </main>
+</Layout>

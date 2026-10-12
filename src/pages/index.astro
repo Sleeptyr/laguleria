@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Marquee from '../components/Marquee.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import BehindTheFire from '../components/BehindTheFire.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <!-- 1. Header flotante (con botón WhatsApp fijo en móvil) -->
+  <Header />
+
+  <!-- Main Landmark para WCAG AA -->
+  <main id="contenido-principal">
+    <!-- 2. Hero con foto de plato estrella, partículas y CTA WhatsApp -->
+    <Hero />
+
+    <!-- 3. Marquee de frases de marca -->
+    <Marquee />
+
+    <!-- 4. Cómo funciona en 3 pasos -->
+    <HowItWorks />
+
+    <!-- 5. Detrás del Fuego (opcional y configurable) -->
+    <BehindTheFire />
+  </main>
+
+  <!-- 6. Footer con contacto, ubicación, redes y Schema.org -->
+  <Footer />
+</Layout>

@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { siteConfig } from '../config/site';
+---
+
+<Layout title="Política de Privacidad | La Gulería" description="Política de privacidad y protección de datos personales de La Gulería en Junín.">
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 py-20 text-brand-dark">
+    <a href="/" class="inline-flex items-center gap-2 text-sm font-bold text-brand-accent mb-8 hover:underline">
+      ← Volver al inicio
+    </a>
+
+    <h1 class="font-display text-3xl sm:text-4xl font-black mb-6 tracking-tight">
+      Política de Privacidad
+    </h1>
+
+    <div class="prose text-brand-muted space-y-4 text-sm sm:text-base leading-relaxed">
+      <p>
+        En <strong>{siteConfig.brandName}</strong> ({siteConfig.city}) nos tomamos muy en serio tu privacidad conforme a lo establecido en la Ley Nacional de Protección de Datos Personales N° 25.326 de la República Argentina.
+      </p>
+
+      <h2 class="font-display text-xl font-bold text-brand-dark pt-4">1. Recolección de datos</h2>
+      <p>
+        Este sitio web no almacena cookies de rastreo invasivas ni recolecta información personal sensible por defecto. Toda conversación, pedido o consulta se realiza de manera voluntaria y directa a través de WhatsApp Business o Instagram Direct.
+      </p>
+
+      <h2 class="font-display text-xl font-bold text-brand-dark pt-4">2. Enlaces a terceros</h2>
+      <p>
+        La página contiene enlaces directos hacia servicios de terceros como WhatsApp (Meta Platforms) e Instagram. Dichos sitios cuentan con sus propias políticas de privacidad sobre las cuales no tenemos control ni responsabilidad directa.
+      </p>
+
+      <h2 class="font-display text-xl font-bold text-brand-dark pt-4">3. Contacto</h2>
+      <p>
+        Por cualquier duda relacionada con esta política, podés escribirnos directamente a nuestro canal oficial de WhatsApp o por mensaje privado en nuestro perfil de Instagram: <a href={siteConfig.contact.instagramUrl} class="text-brand-accent underline">{siteConfig.contact.instagramHandle}</a>.
+      </p>
+    </div>
+  </main>
+</Layout>
