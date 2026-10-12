@@ -1,0 +1,65 @@
+---
+import { siteConfig } from '../config/site';
+
+const { badge, title, subtitle, pillars, footNote } = siteConfig.philosophy;
+---
+
+<section class="py-20 sm:py-28 relative overflow-hidden bg-transparent" id="propuesta">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    
+    <!-- Encabezado editorial de la propuesta -->
+    <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+      <span class="font-bouncy text-xs sm:text-sm font-bold tracking-widest uppercase text-brand-dark/70 bg-brand-surface/60 px-4 py-1.5 rounded-full inline-block transform -rotate-1 border border-brand-dark/15 shadow-sm">
+        {badge}
+      </span>
+
+      <h2 class="font-display text-4xl sm:text-6xl lg:text-7xl font-normal tracking-wide leading-tight select-none">
+        <span class="text-brand-surface inline-block text-[1.12em] transform -rotate-2 drop-shadow-[0_2px_4px_rgba(38,31,28,0.2)]">El placer</span>{" "}
+        <span class="text-brand-dark inline-block text-[0.95em] transform rotate-1">de hacer</span>{" "}
+        <span class="text-brand-dark inline-block text-[1.05em] transform -rotate-1">las cosas</span>{" "}
+        <span class="text-brand-surface inline-block text-[1.22em] transform rotate-3 drop-shadow-[0_2px_4px_rgba(38,31,28,0.2)] underline decoration-brand-dark decoration-wavy decoration-2">bien.</span>
+      </h2>
+
+      <p class="text-base sm:text-lg text-brand-dark/85 font-medium leading-relaxed max-w-lg mx-auto">
+        {subtitle}
+      </p>
+    </div>
+
+    <!-- Grilla de los 3 pilares del oficio -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 relative">
+      {pillars.map((pillar, idx) => (
+        <div class="group relative flex flex-col pt-6 border-t-2 border-brand-dark/30 hover:border-brand-dark transition-all duration-300">
+          
+          <!-- Numeración grande editorial -->
+          <div class="flex items-baseline justify-between mb-4">
+            <span class="font-display text-5xl sm:text-6xl text-brand-surface drop-shadow-[0_3px_6px_rgba(38,31,28,0.25)] group-hover:scale-110 group-hover:-rotate-3 transition-transform inline-block">
+              {pillar.number}
+            </span>
+            <span class="font-bouncy text-[11px] font-bold tracking-widest uppercase text-brand-dark/60 bg-brand-surface/50 px-2.5 py-1 rounded-full">
+              Pilar {idx + 1}
+            </span>
+          </div>
+
+          <!-- Título del pilar -->
+          <h3 class="font-display text-2xl sm:text-3xl font-normal mb-3 tracking-wide text-brand-dark select-none group-hover:text-black transition-colors">
+            {pillar.title}
+          </h3>
+
+          <!-- Descripción del oficio -->
+          <p class="text-brand-dark/80 text-sm sm:text-base leading-relaxed font-normal">
+            {pillar.description}
+          </p>
+
+        </div>
+      ))}
+    </div>
+
+    <!-- Cierre editorial -->
+    <div class="mt-16 pt-8 border-t border-brand-dark/20 text-center">
+      <p class="font-bouncy text-sm font-semibold text-brand-dark tracking-wide">
+        {footNote}
+      </p>
+    </div>
+
+  </div>
+</section>

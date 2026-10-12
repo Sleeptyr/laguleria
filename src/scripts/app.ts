@@ -48,8 +48,8 @@ export function initApp() {
       });
     }
 
-    // Tarjetas en "Cómo funciona" (fromTo seguro con start generoso 'top 90%' y once: true)
-    const stepCards = document.querySelectorAll('#como-funciona .grid > div');
+    // Pilares en "La Propuesta"
+    const stepCards = document.querySelectorAll('#propuesta .grid > div');
     if (stepCards.length > 0) {
       gsap.fromTo(
         stepCards,
@@ -61,7 +61,7 @@ export function initApp() {
           duration: 0.6,
           ease: 'power2.out',
           scrollTrigger: {
-            trigger: '#como-funciona',
+            trigger: '#propuesta',
             start: 'top 90%',
             once: true
           }
@@ -69,11 +69,11 @@ export function initApp() {
       );
     }
 
-    // Sección "Detrás del Fuego"
-    const behindFire = document.querySelector('#detras-del-fuego');
-    if (behindFire) {
+    // Sección Creadores
+    const creatorsSec = document.querySelector('#creadores');
+    if (creatorsSec) {
       gsap.fromTo(
-        behindFire,
+        creatorsSec,
         { y: 30, opacity: 0 },
         {
           y: 0,
@@ -81,7 +81,7 @@ export function initApp() {
           duration: 0.7,
           ease: 'power2.out',
           scrollTrigger: {
-            trigger: '#detras-del-fuego',
+            trigger: '#creadores',
             start: 'top 90%',
             once: true
           }

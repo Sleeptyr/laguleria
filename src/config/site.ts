@@ -1,106 +1,105 @@
 /**
  * CONFIGURACIÓN CENTRAL DE LA GULERÍA
- * Todos los textos, enlaces, números de contacto y opciones editables del sitio.
- * Modificá este archivo para actualizar cualquier dato de la landing.
+ * Todos los textos, enlaces y opciones del sitio institucional / presentación.
  */
 
 export const siteConfig = {
   // Identidad básica
   brandName: 'La Gulería',
-  tagline: 'Pecar nunca fue tan rico',
+  tagline: 'Panadería & Pastelería de Especialidad',
   city: 'Junín, Buenos Aires',
-  description: 'Landing page oficial de La Gulería en Junín. Propuesta gastronómica de alto impacto y placer sin culpa. Escribinos directo por WhatsApp para pedidos, consultas y reservas.',
+  description: 'La Gulería es una propuesta gastronómica artesanal en Junín, Buenos Aires. Masa madre, fermentación lenta y cocina con oficio a cargo de Martín Tonidandel y Francina Melo.',
   url: 'https://laguleria.com.ar',
 
   // Colores oficiales extraídos directamente del logo
   theme: {
     colorPrimary: '#E6A192', // Rosa cálido oficial del logo de La Gulería
     colorPrimaryDark: '#D48877',
-    colorAccent: '#2E2724', // Carbón profundo para máxima legibilidad y punch
+    colorAccent: '#2E2724',
     colorAccentHover: '#181412',
     colorDark: '#261F1C', // Oscuro profundo / café tostado del texto "gulería"
-    colorCream: '#E6A192', // Fondo general con el rosa del logo
+    colorCream: '#E6A192',
     colorSurface: '#FAF2EC', // Crema suave para tarjetas (del texto "la")
     colorMuted: '#5C4A44'
   },
 
-  // Contacto & Redes (Completar con datos finales de los clientes)
+  // Contacto & Ubicación
   contact: {
-    // Número con código de país sin espacios ni símbolos (+). Ej: 5492364XXXXXX
     whatsappNumber: '5492364266984',
     instagramHandle: '@laguleria_',
     instagramUrl: 'https://instagram.com/laguleria_',
     address: 'Arias 730, Junín, Buenos Aires',
     googleMapsUrl: 'https://maps.google.com/?q=Arias+730,+Junin,+Buenos+Aires,+Argentina',
-    schedule: 'Jueves a Domingos de 19:30 a 00:00 hs',
-    email: 'contacto@laguleria.com.ar' // [OPCIONAL]
+    schedule: 'Jueves a Domingos desde las 19:30 hs',
+    email: 'contacto@laguleria.com.ar'
   },
 
-  // Mensajes prearmados para WhatsApp por ubicación
+  // Mensajes de contacto por WhatsApp
   whatsappMessages: {
-    header: '¡Hola La Gulería! Vi la web y les escribo para hacerles una consulta:',
-    hero: '¡Hola La Gulería! Quiero pecar, les escribo para coordinar un pedido/reserva:',
-    footer: '¡Hola La Gulería! Les escribo desde el pie de la web para consultar:'
+    header: '¡Hola La Gulería! Vi la web y les escribo para consultarles:',
+    hero: '¡Hola La Gulería! Me encantó la propuesta, les escribo para coordinar:',
+    footer: '¡Hola La Gulería! Les escribo desde la web para hacer una consulta:'
   },
 
-  // Cintas / Marquee
+  // Cintas / Marquee de presentación
   marqueeItems: [
-    'Pecar nunca fue tan rico',
-    'Gula pura, cero culpa',
-    'Cocina de autor en Junín',
-    'El verdadero pecado gastronómico',
-    'Fuego, texturas y sabor descarado',
-    'Pedidos & reservas directo por WhatsApp'
+    'Panadería de especialidad',
+    'Masa madre & fermentación lenta',
+    'Manteca de verdad, cero atajos',
+    'Hecho a mano en Junín',
+    'Arias 730, Junín',
+    'Oficio, fuego y textura'
   ],
 
-  // Sección "Cómo funciona" (3 pasos indispensables)
-  howItWorks: {
-    title: 'Cómo saciar el antojo',
-    subtitle: 'Sin formularios eternos ni vueltas. En tres pasos ya estás comiendo.',
-    steps: [
+  // Sección "Nuestra Filosofía / El Oficio" (Reemplaza a los pasos de venta)
+  philosophy: {
+    badge: 'Nuestra propuesta',
+    title: 'El placer de hacer las cosas bien',
+    subtitle: 'Creemos en la cocina sin trampas: procesos lentos, materia prima noble y respeto absoluto por cada masa.',
+    pillars: [
       {
         number: '01',
-        title: 'Tocá el botón',
-        description: 'Hacé clic en cualquier botón de la página para abrir nuestro WhatsApp directo.'
+        title: 'Masa & Fermentación',
+        description: 'Harinas seleccionadas, fermentaciones largas y paciencia. El tiempo es el ingrediente que no se puede reemplazar.'
       },
       {
         number: '02',
-        title: 'Contanos qué querés',
-        description: 'Decinos si buscás delivery, retiro en el local, una reserva o tenés alguna consulta.'
+        title: 'Hojaldre & Manteca',
+        description: 'Hojaldrado crocante por fuera, aireado y tierno por dentro. Horneado a diario para que cada bocado cruja como debe.'
       },
       {
         number: '03',
-        title: 'Coordinamos al toque',
-        description: 'Te confirmamos disponibilidad al instante y preparamos tu pecado gastronómico.'
+        title: 'Pasión por Compartir',
+        description: 'Una cocina cercana y cálida en Arias 730. Pensada para disfrutar el momento y saciar el antojo sin culpa.'
       }
     ],
-    deliveryNote: 'Take away y envíos en Junín. Horarios de atención: Jue a Dom desde las 19:30 hs.'
+    footNote: 'Elaboración fresca en Arias 730, Junín • Jueves a Domingos desde las 19:30 hs'
   },
 
-  // Sección "Detrás del Fuego" (Opcional, alternable con este booleano)
-  behindTheFire: {
-    enabled: true, // Si el cliente prefiere no mostrarla, cambiar a false
-    title: 'Detrás del Fuego',
-    creators: 'Martín Tonidandel & Francina Melo',
+  // Sección de los Creadores (Martín & Francina)
+  creators: {
+    badge: 'Quiénes somos',
+    title: 'Detrás del Oficio',
+    names: 'Martín Tonidandel & Francina Melo',
     photo: '/images/creadores.webp',
     alt: 'Martín Tonidandel y Francina Melo en La Gulería',
-    bio: 'Nacimos con una sola obsesión: cocinar bien, jugar con texturas que sorprendan y llevar la escena gastronómica de Junín más lejos. Sin caretas, sin timidez y con producto de primera calidad para que cada bocado sea una fiesta.'
+    bio: 'Detrás de La Gulería estamos nosotros. Empezamos con una sola obsesión: reivindicar el oficio de la panadería artesanal, jugar con texturas y llevar a Junín productos con alma propia. Cada preparación que sale del horno tiene nuestras manos, dedicación y mucho amor por la cocina bien hecha.'
   },
 
-  // Analítica (desactivada por defecto hasta confirmación legal y configuración)
+  // Analítica (desactivada por defecto)
   analytics: {
     enabled: false,
-    googleAnalyticsId: '', // Ej: G-XXXXXXXXXX
-    metaPixelId: '' // Ej: 1234567890
+    googleAnalyticsId: '',
+    metaPixelId: ''
   }
 };
 
 /**
- * Genera el enlace oficial a WhatsApp con UTMs y texto codificado
+ * Genera el enlace oficial a WhatsApp
  */
 export function getWhatsAppUrl(location: 'header' | 'hero' | 'footer' = 'hero'): string {
   const phone = siteConfig.contact.whatsappNumber;
   const rawMsg = siteConfig.whatsappMessages[location] || siteConfig.whatsappMessages.hero;
   const encodedText = encodeURIComponent(rawMsg);
-  return `https://wa.me/${phone}?text=${encodedText}&utm_source=landing&utm_medium=button&utm_campaign=${location}`;
+  return `https://wa.me/${phone}?text=${encodedText}&utm_source=web&utm_medium=button&utm_campaign=${location}`;
 }

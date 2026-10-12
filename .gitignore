@@ -19,3 +19,4 @@ Thumbs.db
 
 # Local media reference
 *.mp4
+.vercel
