@@ -3,30 +3,26 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Marquee from '../components/Marquee.astro';
-import Philosophy from '../components/Philosophy.astro';
-import BehindTheFire from '../components/BehindTheFire.astro';
+import Craft from '../components/Craft.astro';
 import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
-  <!-- 1. Header de presentación con navegación -->
+  <!-- 1. Header de presentación con navegación tranquila -->
   <Header />
 
   <!-- Main Landmark para WCAG AA -->
   <main id="contenido-principal">
-    <!-- 2. Hero con identidad de marca y producto estrella -->
+    <!-- 2. Quiénes somos: Martín & Francina en primera persona -->
     <Hero />
 
-    <!-- 3. Marquee con el manifiesto del oficio -->
+    <!-- 3. Manifiesto del oficio y panadería de masa madre -->
     <Marquee />
 
-    <!-- 4. La Propuesta / Los 3 pilares del oficio -->
-    <Philosophy />
-
-    <!-- 5. Los Creadores: Martín & Francina (Storytelling) -->
-    <BehindTheFire />
+    <!-- 4. Nuestra cocina: lo que hacemos y cómo trabajamos -->
+    <Craft />
   </main>
 
-  <!-- 6. El Espacio en Arias 730 y Contacto -->
+  <!-- 5. El Espacio en Arias 730 y Contacto -->
   <Footer />
 </Layout>

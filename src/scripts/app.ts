@@ -33,14 +33,14 @@ export function initApp() {
 
   // 2. Animaciones GSAP progresivas y seguras
   if (!prefersReducedMotion) {
-    // Parallax suave en el plato estrella
+    // Parallax suave en el marco de la foto
     const parallaxEl = document.querySelector('[data-parallax]');
     if (parallaxEl) {
       gsap.to(parallaxEl, {
-        yPercent: -15,
+        yPercent: -10,
         ease: 'none',
         scrollTrigger: {
-          trigger: '#inicio',
+          trigger: '#quienes-somos',
           start: 'top top',
           end: 'bottom top',
           scrub: true
@@ -48,12 +48,12 @@ export function initApp() {
       });
     }
 
-    // Pilares en "La Propuesta"
-    const stepCards = document.querySelectorAll('#propuesta .grid > div');
-    if (stepCards.length > 0) {
+    // Pilares de elaboración en "Nuestra Cocina"
+    const craftCards = document.querySelectorAll('#nuestra-cocina .grid > div');
+    if (craftCards.length > 0) {
       gsap.fromTo(
-        stepCards,
-        { y: 35, opacity: 0 },
+        craftCards,
+        { y: 30, opacity: 0 },
         {
           y: 0,
           opacity: 1,
@@ -61,27 +61,27 @@ export function initApp() {
           duration: 0.6,
           ease: 'power2.out',
           scrollTrigger: {
-            trigger: '#propuesta',
-            start: 'top 90%',
+            trigger: '#nuestra-cocina',
+            start: 'top 85%',
             once: true
           }
         }
       );
     }
 
-    // Sección Creadores
-    const creatorsSec = document.querySelector('#creadores');
-    if (creatorsSec) {
+    // Sección El Espacio
+    const espacioSec = document.querySelector('#espacio');
+    if (espacioSec) {
       gsap.fromTo(
-        creatorsSec,
-        { y: 30, opacity: 0 },
+        espacioSec,
+        { y: 25, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          duration: 0.7,
+          duration: 0.6,
           ease: 'power2.out',
           scrollTrigger: {
-            trigger: '#creadores',
+            trigger: '#espacio',
             start: 'top 90%',
             once: true
           }

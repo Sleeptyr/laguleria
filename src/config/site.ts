@@ -1,25 +1,23 @@
 /**
  * CONFIGURACIÓN CENTRAL DE LA GULERÍA
- * Todos los textos, enlaces y opciones del sitio institucional / presentación.
+ * Web institucional y de presentación centrada en quiénes son Martín & Francina.
  */
 
 export const siteConfig = {
-  // Identidad básica
   brandName: 'La Gulería',
-  tagline: 'Panadería & Pastelería de Especialidad',
+  tagline: 'Cocina artesanal por Martín Tonidandel & Francina Melo',
   city: 'Junín, Buenos Aires',
-  description: 'La Gulería es una propuesta gastronómica artesanal en Junín, Buenos Aires. Masa madre, fermentación lenta y cocina con oficio a cargo de Martín Tonidandel y Francina Melo.',
+  description: 'Somos Martín Tonidandel y Francina Melo. Creamos La Gulería en Junín para compartir nuestra pasión por la panadería de masa madre y la cocina artesanal.',
   url: 'https://laguleria.com.ar',
 
-  // Colores oficiales extraídos directamente del logo
+  // Colores oficiales
   theme: {
-    colorPrimary: '#E6A192', // Rosa cálido oficial del logo de La Gulería
+    colorPrimary: '#E6A192',
     colorPrimaryDark: '#D48877',
-    colorAccent: '#2E2724',
-    colorAccentHover: '#181412',
-    colorDark: '#261F1C', // Oscuro profundo / café tostado del texto "gulería"
+    colorAccent: '#261F1C',
+    colorDark: '#261F1C',
     colorCream: '#E6A192',
-    colorSurface: '#FAF2EC', // Crema suave para tarjetas (del texto "la")
+    colorSurface: '#FAF2EC',
     colorMuted: '#5C4A44'
   },
 
@@ -34,72 +32,51 @@ export const siteConfig = {
     email: 'contacto@laguleria.com.ar'
   },
 
-  // Mensajes de contacto por WhatsApp
-  whatsappMessages: {
-    header: '¡Hola La Gulería! Vi la web y les escribo para consultarles:',
-    hero: '¡Hola La Gulería! Me encantó la propuesta, les escribo para coordinar:',
-    footer: '¡Hola La Gulería! Les escribo desde la web para hacer una consulta:'
-  },
-
-  // Cintas / Marquee de presentación
-  marqueeItems: [
-    'Panadería de especialidad',
-    'Masa madre & fermentación lenta',
-    'Manteca de verdad, cero atajos',
-    'Hecho a mano en Junín',
-    'Arias 730, Junín',
-    'Oficio, fuego y textura'
-  ],
-
-  // Sección "Nuestra Filosofía / El Oficio" (Reemplaza a los pasos de venta)
-  philosophy: {
-    badge: 'Nuestra propuesta',
-    title: 'El placer de hacer las cosas bien',
-    subtitle: 'Creemos en la cocina sin trampas: procesos lentos, materia prima noble y respeto absoluto por cada masa.',
-    pillars: [
-      {
-        number: '01',
-        title: 'Masa & Fermentación',
-        description: 'Harinas seleccionadas, fermentaciones largas y paciencia. El tiempo es el ingrediente que no se puede reemplazar.'
-      },
-      {
-        number: '02',
-        title: 'Hojaldre & Manteca',
-        description: 'Hojaldrado crocante por fuera, aireado y tierno por dentro. Horneado a diario para que cada bocado cruja como debe.'
-      },
-      {
-        number: '03',
-        title: 'Pasión por Compartir',
-        description: 'Una cocina cercana y cálida en Arias 730. Pensada para disfrutar el momento y saciar el antojo sin culpa.'
-      }
-    ],
-    footNote: 'Elaboración fresca en Arias 730, Junín • Jueves a Domingos desde las 19:30 hs'
-  },
-
-  // Sección de los Creadores (Martín & Francina)
-  creators: {
+  // Historia personal
+  story: {
     badge: 'Quiénes somos',
-    title: 'Detrás del Oficio',
-    names: 'Martín Tonidandel & Francina Melo',
-    photo: '/images/creadores.webp',
-    alt: 'Martín Tonidandel y Francina Melo en La Gulería',
-    bio: 'Detrás de La Gulería estamos nosotros. Empezamos con una sola obsesión: reivindicar el oficio de la panadería artesanal, jugar con texturas y llevar a Junín productos con alma propia. Cada preparación que sale del horno tiene nuestras manos, dedicación y mucho amor por la cocina bien hecha.'
+    greeting: 'Hola, somos Martín & Francina',
+    title: 'Bienvenidos a La Gulería',
+    intro: 'Cocinamos juntos, investigamos masas y creamos este rincón en Junín para compartir lo que más amamos: la pastelería y la panadería artesanal hecha con el corazón, sin apuros ni atajos.',
+    paragraph1: 'Detrás de cada preparación que sale del horno estamos nosotros dos. La Gulería no es una fábrica ni una franquicia: es nuestro taller de cocina, un espacio donde reivindicamos el oficio de hacer las cosas bien.',
+    paragraph2: 'Creemos en las fermentaciones largas, en usar manteca de verdad y en darle a cada masa el tiempo que necesita. Para nosotros, la cocina es una forma de dar cariño y reunir a la gente alrededor de la mesa.'
   },
 
-  // Analítica (desactivada por defecto)
-  analytics: {
-    enabled: false,
-    googleAnalyticsId: '',
-    metaPixelId: ''
-  }
+  // El Proyecto / Lo que hacemos
+  craft: {
+    badge: 'Nuestra cocina',
+    title: 'Masa madre, manteca y paciencia',
+    subtitle: 'Hacemos lotes chicos y horneamos a diario para cuidar cada detalle.',
+    details: [
+      {
+        title: 'Fermentación lenta',
+        description: 'Usamos masa madre y fermentaciones prolongadas para lograr digestibilidad, aroma profundo y textura inolvidable.'
+      },
+      {
+        title: 'Materia prima noble',
+        description: 'Harinas limpias, manteca de primera calidad y recetas creadas sin conservantes ni premezclas.'
+      },
+      {
+        title: 'Elaboración a la vista',
+        description: 'En Arias 730 cuidamos cada bandeja que sale del horno para que llegue a tu mesa en su mejor momento.'
+      }
+    ]
+  },
+
+  // Frases del banner rotativo (sin emojis)
+  marqueeItems: [
+    'Masa madre de fermentación lenta',
+    'Martín & Francina',
+    'Manteca pura de primera calidad',
+    'Arias 730 • Junín',
+    'Sin premezclas ni aditivos',
+    'Hecho a mano cada día',
+    'El oficio de cocinar con calma'
+  ]
 };
 
-/**
- * Genera el enlace oficial a WhatsApp
- */
-export function getWhatsAppUrl(location: 'header' | 'hero' | 'footer' = 'hero'): string {
+export function getWhatsAppUrl(location: string = 'web'): string {
   const phone = siteConfig.contact.whatsappNumber;
-  const rawMsg = siteConfig.whatsappMessages[location] || siteConfig.whatsappMessages.hero;
-  const encodedText = encodeURIComponent(rawMsg);
-  return `https://wa.me/${phone}?text=${encodedText}&utm_source=web&utm_medium=button&utm_campaign=${location}`;
+  const msg = encodeURIComponent(`¡Hola Martín y Francina! Vi la web de La Gulería y les quería escribir para...`);
+  return `https://wa.me/${phone}?text=${msg}&utm_source=web&utm_medium=button&utm_campaign=${location}`;
 }
