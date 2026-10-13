@@ -47,19 +47,25 @@ export const siteConfig = {
       title: 'Tortas Negras Rellenas',
       subtitle: 'El clásico indiscutido de La Gulería',
       description: 'Masa tierna y esponjosa, abundante azúcar negra tostada y un relleno generoso de dulce de leche para saciar cualquier antojo.',
-      tag: 'La Estrella de la Casa'
+      tag: 'La Estrella de la Casa',
+      image: '/images/torta-negra.webp',
+      imageAlt: 'Tortas negras rellenas de dulce de leche en La Gulería'
     },
     {
       title: 'Medialunas & Danesas de Manteca',
       subtitle: 'Hojaldre crujiente y aroma a horno',
       description: 'Laminadas con manteca pura y fermentación lenta. Doradas, livianas y con el punto justo de brillo y crocancia en cada capa.',
-      tag: 'Recién Horneadas'
+      tag: 'Recién Horneadas',
+      image: '/images/medialunas.webp',
+      imageAlt: 'Medialunas artesanales de manteca recién salidas del horno'
     },
     {
       title: 'Pastas Caseras del Domingo',
       subtitle: 'La mesa familiar de fin de semana',
       description: 'Sorrentinos rellenos, canelones artesanales y salsas frescas listas para llevar y disfrutar un almuerzo de autor en tu casa.',
-      tag: 'Fines de Semana'
+      tag: 'Fines de Semana',
+      image: '/images/pastas-caseras.webp',
+      imageAlt: 'Sorrentinos caseros y pastas artesanales de La Gulería'
     }
   ],
 
