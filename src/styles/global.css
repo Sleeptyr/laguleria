@@ -19,13 +19,6 @@ html {
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   color: var(--color-dark);
   background-color: #E6A192;
-  background-image: repeating-linear-gradient(
-    90deg,
-    #E6A192 0px,
-    #E6A192 14px,
-    #ECAFA2 14px,
-    #ECAFA2 28px
-  );
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
 }
@@ -35,13 +28,6 @@ body {
   min-height: 100vh;
   position: relative;
   background-color: #E6A192;
-  background-image: repeating-linear-gradient(
-    90deg,
-    #E6A192 0px,
-    #E6A192 14px,
-    #ECAFA2 14px,
-    #ECAFA2 28px
-  );
 }
 
 ::selection {
