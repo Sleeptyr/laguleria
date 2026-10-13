@@ -14,7 +14,8 @@ export default {
           surface: 'var(--color-surface, #FFF8E7)',
           muted: 'var(--color-muted, #725F56)',
           border: 'var(--color-border, #E8DCCB)',
-          orange: 'var(--color-orange, #F07E14)'
+          orange: 'var(--color-orange, #F07E14)',
+          yellow: 'var(--color-yellow, #F7C02B)'
         }
       },
       fontFamily: {
