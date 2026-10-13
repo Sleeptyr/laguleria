@@ -22,10 +22,11 @@ export default {
         }
       },
       fontFamily: {
-        serif: ['"Fraunces"', 'Georgia', 'serif'],
+        serif: ['"Caprasimo"', '"Fraunces"', 'Georgia', 'serif'],
+        editorial: ['"Fraunces"', 'Georgia', 'serif'],
         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
         logo: ['"Shrikhand"', 'cursive'],
-        display: ['"Fraunces"', 'Georgia', 'serif'],
+        display: ['"Caprasimo"', 'cursive', 'serif'],
         body: ['"Plus Jakarta Sans"', 'sans-serif']
       },
       keyframes: {
