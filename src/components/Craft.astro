@@ -26,8 +26,8 @@ const { badge, title, subtitle, details } = siteConfig.craft;
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
-            <div class="absolute bottom-4 left-4 right-4 text-brand-surface text-xs sm:text-sm font-bold tracking-wide pointer-events-none">
-              <span class="bg-brand-dark/85 backdrop-blur-sm px-3.5 py-1 rounded-full shadow-sm font-bouncy">
+            <div class="absolute bottom-4 left-4 right-4 text-brand-surface text-xs sm:text-sm font-medium tracking-wide pointer-events-none">
+              <span class="bg-brand-dark/85 backdrop-blur-sm px-3.5 py-1 rounded-full shadow-sm font-medium">
                 Masa madre & manteca pura
               </span>
             </div>
@@ -39,14 +39,14 @@ const { badge, title, subtitle, details } = siteConfig.craft;
       <!-- Relato de lo que hacen y cómo cocinan -->
       <div class="w-full lg:w-7/12 space-y-6 text-center lg:text-left">
         
-        <div class="inline-block bg-brand-surface/90 text-brand-dark px-4 py-1.5 rounded-full text-xs font-bouncy font-bold uppercase tracking-wider border border-brand-dark/15 shadow-sm transform -rotate-1">
+        <div class="inline-block bg-brand-surface/90 text-brand-dark px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider border border-brand-dark/15 shadow-sm">
           {badge}
         </div>
 
-        <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-normal tracking-wide text-brand-dark select-none leading-tight">
-          <span class="text-brand-surface inline-block text-[1.1em] transform -rotate-2 drop-shadow-[0_2px_4px_rgba(38,31,28,0.2)]">Masa madre,</span>{" "}
-          <span class="text-brand-dark inline-block text-[0.96em] transform rotate-1">manteca y</span>{" "}
-          <span class="text-brand-surface inline-block text-[1.18em] transform rotate-2 drop-shadow-[0_2px_4px_rgba(38,31,28,0.2)] underline decoration-brand-dark decoration-wavy decoration-2">paciencia.</span>
+        <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-brand-dark select-none leading-tight">
+          <span class="text-brand-surface drop-shadow-[0_2px_4px_rgba(38,31,28,0.22)]">Masa madre,</span>{" "}
+          <span>manteca y</span>{" "}
+          <span class="text-brand-surface drop-shadow-[0_2px_4px_rgba(38,31,28,0.22)]">paciencia.</span>
         </h2>
 
         <p class="text-brand-dark/85 text-base sm:text-lg font-normal leading-relaxed">
@@ -60,7 +60,7 @@ const { badge, title, subtitle, details } = siteConfig.craft;
               <span class="font-display text-2xl text-brand-surface drop-shadow-sm block mb-1">
                 0{idx + 1}
               </span>
-              <h3 class="font-bouncy text-base font-bold text-brand-dark mb-1.5">
+              <h3 class="font-semibold text-base text-brand-dark mb-1.5">
                 {item.title}
               </h3>
               <p class="text-brand-dark/75 text-xs sm:text-sm leading-relaxed">

@@ -21,18 +21,17 @@ const { badge, greeting, title, intro, paragraph1 } = siteConfig.story;
       <div class="flex-1 text-center lg:text-left space-y-6">
         
         <!-- Badge superior -->
-        <div class="inline-flex items-center gap-2 bg-brand-surface/90 border border-brand-dark/20 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bouncy font-bold tracking-wide text-brand-dark shadow-sm transform -rotate-1">
+        <div class="inline-flex items-center gap-2 bg-brand-surface/90 border border-brand-dark/20 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide text-brand-dark shadow-sm">
           <span class="w-2 h-2 rounded-full bg-brand-dark animate-ping"></span>
           <span>{badge} &bull; Junín, Buenos Aires</span>
         </div>
 
-        <!-- Título principal: Saludo cercano y presentación -->
-        <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-normal tracking-wide leading-[1.08] select-none">
-          <span class="text-brand-surface inline-block text-[1.12em] transform -rotate-2 drop-shadow-[0_2px_4px_rgba(38,31,28,0.2)]">Hola, somos</span>{" "}
-          <span class="text-brand-dark inline-block text-[0.98em] transform rotate-1">Martín &</span>{" "}
-          <span class="text-brand-dark inline-block text-[0.98em] transform -rotate-1">Francina.</span>
+        <!-- Título principal: Saludo cercano y presentación ordenado -->
+        <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-normal tracking-tight leading-[1.12] select-none text-brand-dark">
+          <span class="text-brand-surface drop-shadow-[0_2px_4px_rgba(38,31,28,0.22)]">Hola, somos</span>{" "}
+          <span>Martín & Francina.</span>
           <br />
-          <span class="relative inline-block text-brand-surface text-[1.15em] transform rotate-2 drop-shadow-[0_3px_6px_rgba(38,31,28,0.25)] underline decoration-brand-dark decoration-wavy decoration-3">
+          <span class="text-brand-surface drop-shadow-[0_2px_4px_rgba(38,31,28,0.22)]">
             Bienvenidos a La Gulería.
           </span>
         </h1>
@@ -51,7 +50,7 @@ const { badge, greeting, title, intro, paragraph1 } = siteConfig.story;
         <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
           <a
             href="#nuestra-cocina"
-            class="inline-flex items-center justify-center gap-2 bg-brand-surface hover:bg-white border-2 border-brand-dark/30 hover:border-brand-dark text-brand-dark font-bouncy text-sm font-bold uppercase tracking-wider px-7 py-3.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5 min-h-[48px]"
+            class="inline-flex items-center justify-center gap-2 bg-brand-surface hover:bg-white border-2 border-brand-dark/30 hover:border-brand-dark text-brand-dark font-semibold text-sm uppercase tracking-wider px-7 py-3.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5 min-h-[48px]"
           >
             <span>Conocé lo que hacemos</span>
             <span>&darr;</span>
@@ -59,7 +58,7 @@ const { badge, greeting, title, intro, paragraph1 } = siteConfig.story;
 
           <a
             href="#espacio"
-            class="inline-flex items-center justify-center gap-2 bg-brand-dark hover:bg-black text-brand-surface font-bouncy text-sm font-bold uppercase tracking-wider px-7 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 min-h-[48px]"
+            class="inline-flex items-center justify-center gap-2 bg-brand-dark hover:bg-black text-brand-surface font-semibold text-sm uppercase tracking-wider px-7 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 min-h-[48px]"
           >
             <span>Dónde encontrarnos</span>
             <span>&rarr;</span>
@@ -74,8 +73,8 @@ const { badge, greeting, title, intro, paragraph1 } = siteConfig.story;
         <!-- Halo suave de fondo -->
         <div class="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-brand-surface/40 -z-10 blur-xl" aria-hidden="true"></div>
         
-        <!-- Píldora de badge lúdico flotante -->
-        <div class="absolute -top-3 -right-2 sm:right-6 bg-brand-dark text-brand-surface text-xs sm:text-sm font-bouncy font-bold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-lg transform rotate-6 animate-float z-20 border border-brand-surface/20">
+        <!-- Píldora de badge superior -->
+        <div class="absolute -top-3 -right-2 sm:right-6 bg-brand-dark text-brand-surface text-xs sm:text-sm font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-lg z-20 border border-brand-surface/20">
           En nuestra cocina
         </div>
 
@@ -94,7 +93,7 @@ const { badge, greeting, title, intro, paragraph1 } = siteConfig.story;
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent pointer-events-none"></div>
             <div class="absolute bottom-4 left-4 right-4 text-brand-surface text-xs sm:text-sm font-bold tracking-wide flex items-center justify-between pointer-events-none">
-              <span class="bg-brand-dark/85 backdrop-blur-sm px-3.5 py-1 rounded-full shadow-sm font-bouncy">
+              <span class="bg-brand-dark/85 backdrop-blur-sm px-3.5 py-1 rounded-full shadow-sm font-medium tracking-wide">
                 Martín & Francina &bull; Arias 730
               </span>
             </div>
