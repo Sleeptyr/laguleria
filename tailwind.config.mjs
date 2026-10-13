@@ -5,22 +5,27 @@ export default {
     extend: {
       colors: {
         brand: {
-          primary: 'var(--color-primary, #F5BF23)',
-          'primary-dark': 'var(--color-primary-dark, #DFA012)',
-          accent: 'var(--color-accent, #FF3366)',
-          'accent-hover': 'var(--color-accent-hover, #E02052)',
-          dark: 'var(--color-dark, #231610)',
-          cream: 'var(--color-cream, #FFFDF7)',
-          surface: 'var(--color-surface, #FFF8E7)',
-          muted: 'var(--color-muted, #725F56)',
-          border: 'var(--color-border, #E8DCCB)',
-          orange: 'var(--color-orange, #F07E14)',
-          yellow: 'var(--color-yellow, #F7C02B)'
+          canvas: '#FAF7F2',
+          surface: '#FFFFFF',
+          card: '#F5EFEB',
+          dark: '#1C1614',
+          muted: '#63564E',
+          border: '#E8DED4',
+          pink: '#E6A192',
+          orange: '#F07E14',
+          yellow: '#F7C02B',
+          // Compatibilidad retroactiva
+          primary: '#E6A192',
+          'primary-dark': '#D48877',
+          accent: '#F07E14',
+          cream: '#FAF7F2'
         }
       },
       fontFamily: {
-        display: ['"Shrikhand"', 'cursive'],
-        bouncy: ['"DynaPuff"', 'cursive'],
+        serif: ['"Fraunces"', 'Georgia', 'serif'],
+        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+        logo: ['"Shrikhand"', 'cursive'],
+        display: ['"Fraunces"', 'Georgia', 'serif'],
         body: ['"Plus Jakarta Sans"', 'sans-serif']
       },
       keyframes: {

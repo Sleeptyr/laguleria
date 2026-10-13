@@ -37,27 +37,23 @@ const schemaData = {
 };
 ---
 
-<footer class="bg-brand-dark text-brand-cream relative pt-20 pb-12 overflow-hidden border-t-4 border-brand-primary" id="contacto">
+<footer class="bg-brand-dark text-white/80 relative pt-20 pb-12 overflow-hidden border-t border-brand-dark" id="contacto">
   
-  <!-- Chispitas y estrellas decorativas sutiles en el footer -->
-  <div class="pointer-events-none absolute inset-0 opacity-10 select-none" aria-hidden="true">
-    <div class="absolute top-10 left-10 w-4 h-4 rounded-full bg-brand-primary"></div>
-    <div class="absolute bottom-20 right-16 w-3 h-3 rounded-full bg-brand-accent"></div>
-  </div>
-
   <div class="max-w-6xl mx-auto px-4 sm:px-6" id="espacio">
     
     <!-- Bloque de bienvenida al espacio en Footer -->
-    <div class="bg-brand-surface text-brand-dark rounded-3xl p-8 sm:p-12 text-center max-w-3xl mx-auto mb-16 shadow-2xl relative overflow-hidden">
-      <!-- Fondo de detalle lúdico -->
-      <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-primary/30 rounded-full blur-xl" aria-hidden="true"></div>
+    <div class="bg-white text-brand-dark rounded-3xl p-10 sm:p-14 text-center max-w-4xl mx-auto mb-16 shadow-[0_20px_50px_rgba(28,22,20,0.12)] border border-brand-border/80 relative overflow-hidden">
+      
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-card border border-brand-border/80 text-xs font-sans font-semibold uppercase tracking-widest text-brand-dark/80 shadow-sm mb-4">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
+        <span>El Espacio Físico &bull; Junín</span>
+      </div>
 
-      <h2 class="font-display text-3xl sm:text-5xl font-normal mb-4 tracking-tight select-none">
-        <span class="text-brand-dark">Te esperamos</span>{" "}
-        <span class="text-brand-orange">en Arias 730</span>
+      <h2 class="font-serif text-3xl sm:text-5xl font-normal mb-4 tracking-tight select-none text-brand-dark">
+        Te esperamos en <span class="italic font-light text-brand-dark/85">Arias 730</span>
       </h2>
-      <p class="text-brand-muted text-base sm:text-lg max-w-lg mx-auto mb-8 font-normal leading-relaxed">
-        Un espacio en Junín pensado para frenar la rutina, disfrutar de la masa madre recién horneada y compartir momentos alrededor de la mesa.
+      <p class="text-brand-muted text-base sm:text-lg max-w-xl mx-auto mb-8 font-sans font-normal leading-relaxed">
+        Un espacio pensado en Junín para frenar la rutina, disfrutar de la masa madre recién horneada y compartir momentos alrededor de la mesa.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -66,7 +62,7 @@ const schemaData = {
           target="_blank"
           rel="noopener noreferrer"
           data-track="click_mapa"
-          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-cream/80 hover:bg-brand-cream border-2 border-brand-dark/20 text-brand-dark font-semibold text-sm uppercase tracking-wider px-6 py-3.5 rounded-full transition-all duration-200 min-h-[48px]"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-card hover:bg-brand-border/60 border border-brand-border text-brand-dark font-sans text-xs font-semibold uppercase tracking-widest px-7 py-4 rounded-full transition-all duration-200 min-h-[48px]"
         >
           <span>Ver cómo llegar en Maps</span>
           <span>&rarr;</span>
@@ -78,10 +74,10 @@ const schemaData = {
           rel="noopener noreferrer"
           data-track="click_whatsapp"
           data-location="footer"
-          class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-dark hover:bg-black text-brand-surface font-semibold text-sm uppercase tracking-wider px-7 py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 min-h-[48px]"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-dark hover:bg-black text-white font-sans text-xs font-semibold uppercase tracking-widest px-7 py-4 rounded-full shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5 min-h-[48px]"
           aria-label="Abrir WhatsApp para escribir a La Gulería"
         >
-          <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+          <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M17.472 14.382c-.301-.15-1.782-.879-2.058-.98-.276-.1-.477-.15-.678.15-.2.301-.778.98-.954 1.18-.175.2-.351.226-.652.075-.3-.15-1.268-.468-2.416-1.492-.893-.797-1.496-1.782-1.672-2.083-.175-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.2-.301.301-.502.101-.2.05-.376-.025-.526-.075-.15-.678-1.632-.929-2.235-.245-.588-.494-.508-.679-.518l-.578-.01c-.2 0-.527.075-.803.376s-1.054 1.03-1.054 2.513 1.079 2.914 1.23 3.115c.15.2 2.123 3.242 5.143 4.547.718.311 1.279.497 1.716.636.721.23 1.378.197 1.897.12.578-.087 1.782-.728 2.033-1.431.251-.703.251-1.305.176-1.43-.075-.126-.276-.201-.577-.351z"/>
             <path d="M12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.662 1.434 5.176L2 22l4.981-1.396A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2a8.167 8.167 0 01-4.225-1.177l-.303-.18-3.08.863.87-2.997-.197-.319A8.169 8.169 0 1112 20.2z"/>
           </svg>
@@ -96,12 +92,12 @@ const schemaData = {
     </div>
 
     <!-- Grilla de Información de Contacto -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-brand-cream/15 text-center md:text-left">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-white/10 text-center md:text-left">
       
       <!-- Bloque 1: Identidad -->
       <div>
-        <h3 class="font-display text-2xl font-black text-brand-orange mb-3 tracking-tight">
-          {siteConfig.brandName}
+        <h3 class="font-logo text-3xl text-brand-pink mb-3 lowercase tracking-tight">
+          la gulería
         </h3>
         <p class="text-sm text-brand-cream/70 leading-relaxed max-w-xs mx-auto md:mx-0">
           Propuesta gastronómica con identidad, carácter y pasión en Junín, Buenos Aires.

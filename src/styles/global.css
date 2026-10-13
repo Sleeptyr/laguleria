@@ -3,24 +3,24 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #E6A192;
-  --color-primary-dark: #D48877;
-  --color-accent: #261F1C;
-  --color-accent-hover: #140F0D;
-  --color-dark: #261F1C;
-  --color-cream: #E6A192;
-  --color-surface: #FAF2EC;
-  --color-muted: #52403B;
-  --color-border: #D89485;
+  --color-canvas: #FAF7F2;
+  --color-surface: #FFFFFF;
+  --color-card: #F5EFEB;
+  --color-dark: #1C1614;
+  --color-muted: #63564E;
+  --color-border: #E8DED4;
+  --color-pink: #E6A192;
   --color-orange: #F07E14;
   --color-yellow: #F7C02B;
+  --color-primary: #E6A192;
+  --color-cream: #FAF7F2;
 }
 
 /* Base resets & typography */
 html {
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  color: var(--color-dark);
-  background-color: #E6A192;
+  color: #1C1614;
+  background-color: #FAF7F2;
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
 }
@@ -29,18 +29,16 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   position: relative;
-  background-color: #E6A192;
+  background-color: #FAF7F2;
   background-image: 
-    radial-gradient(ellipse 70% 45% at 50% 0%, #F6D6CB 0%, rgba(246, 214, 203, 0) 70%),
-    radial-gradient(circle at 90% 40%, rgba(250, 242, 236, 0.25) 0%, transparent 50%),
-    radial-gradient(circle at 10% 70%, rgba(212, 136, 119, 0.3) 0%, transparent 60%),
-    linear-gradient(180deg, #EDBDB1 0%, #E6A192 35%, #DF9585 70%, #D48877 100%);
-  background-attachment: fixed;
+    radial-gradient(ellipse 60% 35% at 50% 0%, #FFF5ED 0%, transparent 70%),
+    radial-gradient(circle at 85% 25%, rgba(230, 161, 146, 0.09) 0%, transparent 45%),
+    radial-gradient(circle at 15% 65%, rgba(240, 126, 20, 0.06) 0%, transparent 50%);
 }
 
 ::selection {
-  background-color: #FF3366;
-  color: #FFFFFF;
+  background-color: #E6A192;
+  color: #1C1614;
 }
 
 /* Lenis smooth scroll */

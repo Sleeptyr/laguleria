@@ -1,57 +1,55 @@
 ---
 import { siteConfig } from '../config/site';
-import Sprinkles from './Sprinkles.astro';
 
 const { intro, paragraph1 } = siteConfig.story;
 ---
 
-<section class="relative pt-28 pb-16 sm:pt-36 sm:pb-24 overflow-hidden bg-transparent" id="quienes-somos">
-  
-  <!-- Formas orgánicas decorativas de fondo -->
-  <div class="pointer-events-none absolute -top-24 -right-24 w-80 h-80 sm:w-[500px] sm:h-[500px] bg-brand-surface/30 blob-shape-1 blur-2xl -z-10" aria-hidden="true"></div>
-  <div class="pointer-events-none absolute top-1/2 -left-32 w-72 h-72 sm:w-[450px] sm:h-[450px] bg-brand-surface/20 blob-shape-2 blur-xl -z-10" aria-hidden="true"></div>
-
-  <!-- Microilustraciones -->
-  <Sprinkles />
-
+<section class="relative pt-32 pb-20 sm:pt-40 sm:pb-28 overflow-hidden" id="quienes-somos">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
     <div class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
       
-      <!-- Presentación de Martín y Francina en primera persona -->
+      <!-- Relato editorial de Martín y Francina -->
       <div class="flex-1 text-center lg:text-left space-y-6">
         
-        <!-- Título principal: Base oscura con palabras clave en amarillo -->
-        <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-normal tracking-tight leading-[1.12] select-none text-brand-dark">
-          Hola, somos{" "}
-          <span class="text-brand-yellow drop-shadow-[0_2px_4px_rgba(38,31,28,0.25)]">Martín & Francina.</span>
-          <br />
-          Bienvenidos a{" "}
-          <span class="text-brand-yellow drop-shadow-[0_2px_4px_rgba(38,31,28,0.25)]">La Gulería.</span>
+        <!-- Categoría / Pre-título editorial -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-brand-border/80 text-xs font-sans font-semibold uppercase tracking-widest text-brand-dark/80 shadow-sm">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
+          <span>Taller de Masa Madre &bull; Junín, Bs. As.</span>
+        </div>
+
+        <!-- Título principal editorial gastronómico -->
+        <h1 class="font-serif text-4xl sm:text-6xl lg:text-[4.25rem] font-normal tracking-tight text-brand-dark leading-[1.08] select-none">
+          Panadería honesta, <span class="italic font-light text-brand-dark/85">tiempo</span> y manteca de verdad.
         </h1>
 
-        <!-- Párrafos personales cálidos -->
-        <div class="space-y-4 text-brand-dark/85 text-base sm:text-lg font-normal leading-relaxed max-w-xl mx-auto lg:mx-0">
+        <!-- Bajada de autor -->
+        <p class="font-serif text-xl sm:text-2xl italic text-brand-dark/75 leading-snug">
+          Somos Martín Tonidandel y Francina Melo. Bienvenidos a La Gulería.
+        </p>
+
+        <!-- Texto personal -->
+        <div class="space-y-3 text-brand-muted text-base sm:text-lg font-sans font-normal leading-relaxed max-w-xl mx-auto lg:mx-0">
           <p>
             {intro}
           </p>
-          <p class="text-brand-dark/75 text-sm sm:text-base">
+          <p class="text-sm sm:text-base text-brand-muted/90">
             {paragraph1}
           </p>
         </div>
 
-        <!-- Botón de exploración tranquilo hacia el proyecto -->
+        <!-- Acciones tranquilas de navegación -->
         <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
           <a
             href="#nuestra-cocina"
-            class="inline-flex items-center justify-center gap-2 bg-brand-surface hover:bg-white border-2 border-brand-dark/30 hover:border-brand-dark text-brand-dark font-semibold text-sm uppercase tracking-wider px-7 py-3.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5 min-h-[48px]"
+            class="inline-flex items-center justify-center gap-2 bg-brand-dark hover:bg-black text-white font-sans text-xs font-semibold uppercase tracking-widest px-7 py-4 rounded-full shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5 min-h-[48px]"
           >
-            <span>Conocé lo que hacemos</span>
+            <span>Conocé nuestro oficio</span>
             <span>&darr;</span>
           </a>
 
           <a
             href="#espacio"
-            class="inline-flex items-center justify-center gap-2 bg-brand-dark hover:bg-black text-brand-surface font-semibold text-sm uppercase tracking-wider px-7 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 min-h-[48px]"
+            class="inline-flex items-center justify-center gap-2 bg-white hover:bg-brand-card border border-brand-border text-brand-dark font-sans text-xs font-semibold uppercase tracking-widest px-7 py-4 rounded-full shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5 min-h-[48px]"
           >
             <span>Dónde encontrarnos</span>
             <span>&rarr;</span>
@@ -60,20 +58,19 @@ const { intro, paragraph1 } = siteConfig.story;
 
       </div>
 
-      <!-- Protagonista del Hero: Foto real de los creadores en la cocina -->
+      <!-- Retrato de Martín y Francina con encuadre editorial -->
       <div class="flex-1 flex justify-center items-center relative w-full max-w-sm sm:max-w-md lg:max-w-none">
         
-        <!-- Halo suave de fondo -->
-        <div class="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-brand-surface/40 -z-10 blur-xl" aria-hidden="true"></div>
-        
-        <!-- Píldora de badge superior en naranja de marca -->
-        <div class="absolute -top-3 -right-2 sm:right-6 bg-brand-orange text-brand-surface text-xs sm:text-sm font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-lg z-20 border border-brand-surface/20">
-          En nuestra cocina
+        <!-- Sello packaging circular decorativo de La Gulería -->
+        <div class="absolute -top-4 -right-2 sm:right-4 z-20 w-24 h-24 rounded-full bg-brand-pink text-brand-dark p-1.5 shadow-lg flex flex-col items-center justify-center text-center border-2 border-white select-none pointer-events-none transform rotate-6">
+          <span class="text-[9px] font-sans font-bold uppercase tracking-widest text-brand-dark/70">Arias 730</span>
+          <span class="font-logo text-xs lowercase leading-none text-brand-dark my-0.5">la gulería</span>
+          <span class="text-[8px] font-sans font-semibold uppercase tracking-wider text-brand-dark/70">Masa Madre</span>
         </div>
 
-        <!-- Marco vertical de la foto de Martín y Francina -->
-        <div class="relative w-64 sm:w-80 lg:w-[380px] aspect-[4/5] p-2" data-parallax="0.15">
-          <div class="w-full h-full rounded-[2.5rem] sm:rounded-[3rem] overflow-hidden border-4 border-brand-surface shadow-[0_20px_45px_rgba(38,31,28,0.25)] relative group bg-brand-surface/30">
+        <!-- Marco estilo paspartú editorial para la foto -->
+        <div class="relative w-64 sm:w-80 lg:w-[380px] aspect-[4/5] p-3 bg-white rounded-3xl shadow-[0_20px_50px_rgba(28,22,20,0.08)] border border-brand-border/70" data-parallax="0.15">
+          <div class="w-full h-full rounded-2xl overflow-hidden relative group bg-brand-card">
             <img
               src="/images/creadores.webp"
               alt="Martín Tonidandel y Francina Melo en La Gulería"
@@ -84,10 +81,10 @@ const { intro, paragraph1 } = siteConfig.story;
               decoding="async"
               class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent pointer-events-none"></div>
-            <div class="absolute bottom-4 left-4 right-4 text-brand-surface text-xs sm:text-sm font-bold tracking-wide flex items-center justify-between pointer-events-none">
-              <span class="bg-brand-dark/85 backdrop-blur-sm px-3.5 py-1 rounded-full shadow-sm font-medium tracking-wide">
-                Martín & Francina &bull; Arias 730
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-white text-xs font-sans font-medium flex items-center justify-between pointer-events-none">
+              <span class="bg-black/50 backdrop-blur-md px-3 py-1 rounded-full text-[11px] tracking-wide">
+                Martín & Francina &bull; Junín
               </span>
             </div>
           </div>
