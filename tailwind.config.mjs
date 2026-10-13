@@ -5,20 +5,20 @@ export default {
     extend: {
       colors: {
         brand: {
-          canvas: '#FAF7F2',
+          canvas: '#E7A494',
           surface: '#FFFFFF',
-          card: '#F5EFEB',
+          card: '#FFF8F5',
           dark: '#1C1614',
-          muted: '#63564E',
-          border: '#E8DED4',
-          pink: '#E6A192',
+          muted: '#4A3A33',
+          border: 'rgba(28, 22, 20, 0.15)',
+          pink: '#E7A494',
           orange: '#F07E14',
           yellow: '#F7C02B',
           // Compatibilidad retroactiva
-          primary: '#E6A192',
+          primary: '#E7A494',
           'primary-dark': '#D48877',
           accent: '#F07E14',
-          cream: '#FAF7F2'
+          cream: '#FFF8F5'
         }
       },
       fontFamily: {

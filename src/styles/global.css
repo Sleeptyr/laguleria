@@ -3,24 +3,24 @@
 @tailwind utilities;
 
 :root {
-  --color-canvas: #FAF7F2;
+  --color-canvas: #E7A494;
   --color-surface: #FFFFFF;
-  --color-card: #F5EFEB;
+  --color-card: #FFF8F5;
   --color-dark: #1C1614;
-  --color-muted: #63564E;
-  --color-border: #E8DED4;
-  --color-pink: #E6A192;
+  --color-muted: #4A3A33;
+  --color-border: rgba(28, 22, 20, 0.15);
+  --color-pink: #E7A494;
   --color-orange: #F07E14;
   --color-yellow: #F7C02B;
-  --color-primary: #E6A192;
-  --color-cream: #FAF7F2;
+  --color-primary: #E7A494;
+  --color-cream: #FFF8F5;
 }
 
 /* Base resets & typography */
 html {
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   color: #1C1614;
-  background-color: #FAF7F2;
+  background-color: #E7A494;
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
 }
@@ -29,11 +29,15 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   position: relative;
-  background-color: #FAF7F2;
+  background-color: #E7A494;
   background-image: 
-    radial-gradient(ellipse 60% 35% at 50% 0%, #FFF5ED 0%, transparent 70%),
-    radial-gradient(circle at 85% 25%, rgba(230, 161, 146, 0.09) 0%, transparent 45%),
-    radial-gradient(circle at 15% 65%, rgba(240, 126, 20, 0.06) 0%, transparent 50%);
+    repeating-linear-gradient(
+      90deg,
+      #E7A494 0px,
+      #E7A494 32px,
+      #E9A797 32px,
+      #E9A797 64px
+    );
 }
 
 ::selection {
