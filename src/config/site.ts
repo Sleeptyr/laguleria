@@ -28,55 +28,55 @@ export const siteConfig = {
     instagramUrl: 'https://instagram.com/laguleria_',
     address: 'Arias 730, Junín, Buenos Aires',
     googleMapsUrl: 'https://maps.google.com/?q=Arias+730,+Junin,+Buenos+Aires,+Argentina',
-    schedule: 'Jueves a Domingos desde las 19:30 hs',
+    schedule: 'Viernes y Sábados 9 a 13 y 17 a 19 hs • Domingos 9 a 13 hs',
     email: 'contacto@laguleria.com.ar'
   },
 
-  // Historia personal
+  // Historia y creadores
   story: {
-    badge: 'Quiénes somos',
+    badge: 'Arias 730 • Junín',
     greeting: 'Hola, somos Martín & Francina',
-    title: 'Bienvenidos a La Gulería',
-    intro: 'Cocinamos juntos, investigamos masas y creamos este rincón en Junín para compartir lo que más amamos: la pastelería y la panadería artesanal hecha con el corazón, sin apuros ni atajos.',
-    paragraph1: 'Detrás de cada preparación que sale del horno estamos nosotros dos. La Gulería no es una fábrica ni una franquicia: es nuestro taller de cocina, un espacio donde reivindicamos el oficio de hacer las cosas bien.',
-    paragraph2: 'Creemos en las fermentaciones largas, en usar manteca de verdad y en darle a cada masa el tiempo que necesita. Para nosotros, la cocina es una forma de dar cariño y reunir a la gente alrededor de la mesa.'
+    title: 'Cocina con ganas y cosas ricas para pecar',
+    intro: 'Somos dos cocineros apasionados por el oficio. En nuestro espacio en Arias 730 elaboramos todo a mano: desde medialunas hojaldradas y nuestras clásicas tortas negras rellenas, hasta las pastas caseras del domingo.',
+    paragraph1: 'Creemos en la comida que te alegra el día: manteca de primera calidad, fermentaciones con tiempo y recetas generosas para compartir en familia o con amigos.'
   },
 
-  // El Proyecto / Lo que hacemos
-  craft: {
-    badge: 'Nuestra cocina',
-    title: 'Masa madre, manteca y paciencia',
-    subtitle: 'Hacemos lotes chicos y horneamos a diario para cuidar cada detalle.',
-    details: [
-      {
-        title: 'Fermentación lenta',
-        description: 'Usamos masa madre y fermentaciones prolongadas para lograr digestibilidad, aroma profundo y textura inolvidable.'
-      },
-      {
-        title: 'Materia prima noble',
-        description: 'Harinas limpias, manteca de primera calidad y recetas creadas sin conservantes ni premezclas.'
-      },
-      {
-        title: 'Elaboración a la vista',
-        description: 'En Arias 730 cuidamos cada bandeja que sale del horno para que llegue a tu mesa en su mejor momento.'
-      }
-    ]
-  },
+  // Lo que hacemos: Especialidades tentadoras reales
+  specialties: [
+    {
+      title: 'Tortas Negras Rellenas',
+      subtitle: 'El clásico indiscutido de La Gulería',
+      description: 'Masa tierna y esponjosa, abundante azúcar negra tostada y un relleno generoso de dulce de leche para saciar cualquier antojo.',
+      tag: 'La Estrella de la Casa'
+    },
+    {
+      title: 'Medialunas & Danesas de Manteca',
+      subtitle: 'Hojaldre crujiente y aroma a horno',
+      description: 'Laminadas con manteca pura y fermentación lenta. Doradas, livianas y con el punto justo de brillo y crocancia en cada capa.',
+      tag: 'Recién Horneadas'
+    },
+    {
+      title: 'Pastas Caseras del Domingo',
+      subtitle: 'La mesa familiar de fin de semana',
+      description: 'Sorrentinos rellenos, canelones artesanales y salsas frescas listas para llevar y disfrutar un almuerzo de autor en tu casa.',
+      tag: 'Fines de Semana'
+    }
+  ],
 
-  // Frases del banner rotativo (sin emojis)
+  // Frases del banner rotativo (reales, tentadoras y sin emojis)
   marqueeItems: [
-    'Masa madre de fermentación lenta',
-    'Martín & Francina',
-    'Manteca pura de primera calidad',
+    'Tortas negras rellenas de dulce de leche',
+    'Medialunas 100% manteca',
+    'Martín & Francina en la cocina',
+    'Pastas caseras de domingo',
     'Arias 730 • Junín',
-    'Sin premezclas ni aditivos',
-    'Hecho a mano cada día',
-    'El oficio de cocinar con calma'
+    'Danesas y pastelería fresca',
+    'Hornadas del día'
   ]
 };
 
 export function getWhatsAppUrl(location: string = 'web'): string {
   const phone = siteConfig.contact.whatsappNumber;
-  const msg = encodeURIComponent(`¡Hola Martín y Francina! Vi la web de La Gulería y les quería escribir para...`);
+  const msg = encodeURIComponent(`¡Hola Martín y Francina! Les quería consultar por un pedido para retirar en Arias 730...`);
   return `https://wa.me/${phone}?text=${msg}&utm_source=web&utm_medium=button&utm_campaign=${location}`;
 }

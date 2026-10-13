@@ -3,26 +3,26 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Marquee from '../components/Marquee.astro';
-import Craft from '../components/Craft.astro';
+import Specialties from '../components/Specialties.astro';
 import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
-  <!-- 1. Header de presentación con navegación tranquila -->
+  <!-- 1. Header con navegación e identidad de marca -->
   <Header />
 
-  <!-- Main Landmark para WCAG AA -->
+  <!-- Main Landmark -->
   <main id="contenido-principal">
-    <!-- 2. Quiénes somos: Martín & Francina en primera persona -->
+    <!-- 2. Presentación real de Martín & Francina y La Gulería -->
     <Hero />
 
-    <!-- 3. Manifiesto del oficio y panadería de masa madre -->
+    <!-- 3. Ribbon de especialidades frescas -->
     <Marquee />
 
-    <!-- 4. Nuestra cocina: lo que hacemos y cómo trabajamos -->
-    <Craft />
+    <!-- 4. Las Especialidades de la Casa (Tortas negras, medialunas, pastas) -->
+    <Specialties />
   </main>
 
-  <!-- 5. El Espacio en Arias 730 y Contacto -->
+  <!-- 5. El Espacio en Arias 730, Horarios y Contacto -->
   <Footer />
 </Layout>

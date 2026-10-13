@@ -48,11 +48,11 @@ export function initApp() {
       });
     }
 
-    // Pilares de elaboración en "Nuestra Cocina"
-    const craftCards = document.querySelectorAll('#nuestra-cocina .grid > div');
-    if (craftCards.length > 0) {
+    // Tarjetas de especialidades
+    const specCards = document.querySelectorAll('#especialidades .grid > div');
+    if (specCards.length > 0) {
       gsap.fromTo(
-        craftCards,
+        specCards,
         { y: 30, opacity: 0 },
         {
           y: 0,
@@ -61,7 +61,7 @@ export function initApp() {
           duration: 0.6,
           ease: 'power2.out',
           scrollTrigger: {
-            trigger: '#nuestra-cocina',
+            trigger: '#especialidades',
             start: 'top 85%',
             once: true
           }

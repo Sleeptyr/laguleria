@@ -1,7 +1,8 @@
 ---
-import { siteConfig } from '../config/site';
+import { siteConfig, getWhatsAppUrl } from '../config/site';
 
 const { intro, paragraph1 } = siteConfig.story;
+const whatsappUrl = getWhatsAppUrl('hero');
 ---
 
 <section class="relative pt-32 pb-20 sm:pt-40 sm:pb-28 overflow-hidden" id="quienes-somos">
@@ -12,18 +13,18 @@ const { intro, paragraph1 } = siteConfig.story;
       <div class="flex-1 text-center lg:text-left space-y-6">
         
         <!-- Categoría / Pre-título editorial -->
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-brand-border/80 text-xs font-sans font-semibold uppercase tracking-widest text-brand-dark/80 shadow-sm">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-brand-border text-xs font-sans font-semibold uppercase tracking-widest text-brand-dark/80 shadow-sm">
           <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
-          <span>Taller de Masa Madre &bull; Junín, Bs. As.</span>
+          <span>Arias 730 &bull; Junín, Buenos Aires</span>
         </div>
 
-        <!-- Título principal editorial gastronómico -->
+        <!-- Título principal gastronómico auténtico -->
         <h1 class="font-serif text-4xl sm:text-6xl lg:text-[4.25rem] font-normal tracking-tight text-brand-dark leading-[1.08] select-none">
-          Panadería honesta, <span class="italic font-light text-brand-dark/85">tiempo</span> y manteca de verdad.
+          Hojaldres de manteca, tortas negras rellenas y <span class="italic font-light text-brand-dark/85">cocina con ganas</span>.
         </h1>
 
         <!-- Bajada de autor -->
-        <p class="font-serif text-xl sm:text-2xl italic text-brand-dark/75 leading-snug">
+        <p class="font-serif text-xl sm:text-2xl italic text-brand-dark/80 leading-snug">
           Somos Martín Tonidandel y Francina Melo. Bienvenidos a La Gulería.
         </p>
 
@@ -37,21 +38,23 @@ const { intro, paragraph1 } = siteConfig.story;
           </p>
         </div>
 
-        <!-- Acciones tranquilas de navegación -->
+        <!-- Acciones directas -->
         <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
           <a
-            href="#nuestra-cocina"
+            href="#especialidades"
             class="inline-flex items-center justify-center gap-2 bg-brand-dark hover:bg-black text-white font-sans text-xs font-semibold uppercase tracking-widest px-7 py-4 rounded-full shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5 min-h-[48px]"
           >
-            <span>Conocé nuestro oficio</span>
+            <span>Ver qué hacemos</span>
             <span>&darr;</span>
           </a>
 
           <a
-            href="#espacio"
-            class="inline-flex items-center justify-center gap-2 bg-white hover:bg-brand-card border border-brand-border text-brand-dark font-sans text-xs font-semibold uppercase tracking-widest px-7 py-4 rounded-full shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5 min-h-[48px]"
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 bg-brand-orange hover:bg-brand-orange/90 text-white font-sans text-xs font-semibold uppercase tracking-widest px-7 py-4 rounded-full shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5 min-h-[48px]"
           >
-            <span>Dónde encontrarnos</span>
+            <span>Escribinos por WhatsApp</span>
             <span>&rarr;</span>
           </a>
         </div>
