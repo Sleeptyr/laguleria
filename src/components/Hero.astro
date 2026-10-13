@@ -1,7 +1,6 @@
 ---
 import { siteConfig, getWhatsAppUrl } from '../config/site';
 
-const { intro, paragraph1 } = siteConfig.story;
 const whatsappUrl = getWhatsAppUrl('hero');
 ---
 
@@ -18,20 +17,10 @@ const whatsappUrl = getWhatsAppUrl('hero');
           Hojaldres de manteca, tortas negras rellenas y <span class="italic font-light text-brand-dark/85">cocina con ganas</span>.
         </h1>
 
-        <!-- Bajada de autor -->
-        <p class="font-serif text-xl sm:text-2xl italic text-brand-dark/80 leading-snug">
-          Somos Martín Tonidandel y Francina Melo. Bienvenidos a La Gulería.
+        <!-- Bajada directa y corta -->
+        <p class="text-brand-dark/85 text-lg sm:text-xl font-sans font-normal leading-relaxed max-w-lg mx-auto lg:mx-0">
+          Somos Martín y Francina. Horneamos a mano en nuestro taller de Arias 730 cosas ricas para saciar cualquier antojo.
         </p>
-
-        <!-- Texto personal -->
-        <div class="space-y-3 text-brand-dark/85 text-base sm:text-lg font-sans font-normal leading-relaxed max-w-xl mx-auto lg:mx-0">
-          <p>
-            {intro}
-          </p>
-          <p class="text-sm sm:text-base text-brand-dark/75">
-            {paragraph1}
-          </p>
-        </div>
 
         <!-- Acciones directas -->
         <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
