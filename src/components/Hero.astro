@@ -2,7 +2,7 @@
 import { siteConfig } from '../config/site';
 import Sprinkles from './Sprinkles.astro';
 
-const { badge, greeting, title, intro, paragraph1 } = siteConfig.story;
+const { intro, paragraph1 } = siteConfig.story;
 ---
 
 <section class="relative pt-28 pb-16 sm:pt-36 sm:pb-24 overflow-hidden bg-transparent" id="quienes-somos">
@@ -20,12 +20,6 @@ const { badge, greeting, title, intro, paragraph1 } = siteConfig.story;
       <!-- Presentación de Martín y Francina en primera persona -->
       <div class="flex-1 text-center lg:text-left space-y-6">
         
-        <!-- Badge superior -->
-        <div class="inline-flex items-center gap-2 bg-brand-surface/90 border border-brand-dark/20 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide text-brand-dark shadow-sm">
-          <span class="w-2 h-2 rounded-full bg-brand-dark animate-ping"></span>
-          <span>{badge} &bull; Junín, Buenos Aires</span>
-        </div>
-
         <!-- Título principal: Saludo cercano y presentación ordenado -->
         <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-normal tracking-tight leading-[1.12] select-none text-brand-dark">
           <span class="text-brand-surface drop-shadow-[0_2px_4px_rgba(38,31,28,0.22)]">Hola, somos</span>{" "}
