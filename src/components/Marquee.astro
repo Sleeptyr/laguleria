@@ -8,20 +8,20 @@ const items = siteConfig.marqueeItems;
   <div class="flex overflow-hidden">
     <!-- Grupo 1 -->
     <div class="animate-marquee flex items-center gap-8 py-1 whitespace-nowrap">
-      {items.map((phrase) => (
+      {items.map((phrase, idx) => (
         <span class="inline-flex items-center gap-6 font-display text-xl sm:text-2xl tracking-wide">
-          <span class="text-brand-surface">{phrase}</span>
-          <span class="text-brand-primary text-base" aria-hidden="true">&bull;</span>
+          <span class={idx % 2 === 1 ? 'text-brand-orange' : 'text-brand-surface'}>{phrase}</span>
+          <span class="text-brand-orange text-base" aria-hidden="true">&bull;</span>
         </span>
       ))}
     </div>
 
     <!-- Grupo 2 (Duplicado para loop infinito fluido, oculto para lectores de pantalla) -->
     <div class="animate-marquee flex items-center gap-8 py-1 whitespace-nowrap" aria-hidden="true">
-      {items.map((phrase) => (
+      {items.map((phrase, idx) => (
         <span class="inline-flex items-center gap-6 font-display text-xl sm:text-2xl tracking-wide">
-          <span class="text-brand-surface">{phrase}</span>
-          <span class="text-brand-primary text-base">&bull;</span>
+          <span class={idx % 2 === 1 ? 'text-brand-orange' : 'text-brand-surface'}>{phrase}</span>
+          <span class="text-brand-orange text-base">&bull;</span>
         </span>
       ))}
     </div>
